@@ -1,0 +1,190 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Q&A</title>
+
+  <meta name="description" content="PHYSIs KIT - Q&A">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/img/icon/icon.png" />
+
+  <!--Style-->
+
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style-responsive.css">
+  <link rel="stylesheet" href="/css/inquire.css">
+  <link rel="stylesheet" href="/css/inquire-responsive.css">
+  <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+
+<body>
+
+  <% include ./header %>
+
+  <div class="content" id="ajax-content">
+
+    <!--Content-->
+    <div class="text-intro" id="site-type">
+      <h1>Q&A</h1>
+      <p>
+        <strong class="point-text">피지스 메이커 키트</strong> 콘텐츠 제품 사용에 대한 전반적인 문의사항을 카테고리별로 남겨주세요.<br>
+        제품 견적요청이나 직접 문의를 원하시면 대표 문의메일(physicomtech@gmail.com)로 연락주세요.
+      </p>
+    </div>
+
+    <div class="main-content">
+
+      <table class="width-full">
+        <colgroup>
+          <col class="width-20" />
+          <col class="width-80" />
+        </colgroup>
+
+        <!-- Title -->
+        <tr style="border-bottom: 1px solid #f8f7f7;">
+          <th class="hide-mobile table-header">
+            <div>제목</div>
+          </th>
+          <td>
+            <div>
+              <p class="hide-window table-header" style="padding-top:10px;">제목</p>
+              <input class="width-80" type="text" id="inquire-title"/>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Category -->
+        <tr style="border-bottom: 1px solid #f8f7f7;">
+          <th class="hide-mobile table-header">
+            <div class="inquire-write">카테고리</div>
+          </th>
+          <td>
+            <div>
+              <p class="hide-window table-header" style="padding-top:10px;">카테고리</p>
+              <select class="width-30" id="inquire-category">
+              </select>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Content -->
+        <tr style="border-bottom: 1px solid #f8f7f7;">
+          <th class="hide-mobile table-header">
+            <div class="inquire-write">콘텐츠</div>
+          </th>
+          <td>
+            <div>
+              <p class="hide-window table-header" style="padding-top:10px;">콘텐츠</p>
+              <select class="width-30" id="inquire-content">
+                <option>기타</option>
+              </select>
+            </div>
+          </td>
+        </tr>
+
+        <!-- User Name -->
+        <tr style="border-bottom: 1px solid #f8f7f7;">
+          <th class="hide-mobile table-header">
+            <div>작성자</div>
+          </th>
+          <td>
+            <div>
+              <p class="hide-window table-header" style="padding-top:10px;">작성자</p>
+              <input class="width-40" type="text" id="inquire-user"/>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Password -->
+        <tr style="border-bottom: 1px solid #f8f7f7;" id="tr-pwd">
+          <th class="hide-mobile table-header">
+            <div>비밀번호</div>
+          </th>
+          <td>
+            <div>
+              <p class="hide-window table-header" style="padding-top:10px;">비밀번호</p>
+              <input class="width-40" type="text" id="inquire-pwd"/>
+              <p class="notify">비밀번호 미입력 시, 게시 후 수정 및 삭제가 불가능합니다.</p>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Text -->
+        <tr style="border-bottom: 1px solid #f8f7f7;">
+          <th class="hide-mobile table-header">
+            <div>내용</div>
+          </th>
+          <td>
+            <div>
+              <p class="hide-window table-header" style="padding-top:10px;">내용</p>
+              <textarea id="inquire-description" style="height:240px;" cols="108" rows="15"></textarea>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Captcha -->
+        <tr style="border-bottom: 1px solid #f8f7f7;">
+          <th class="hide-mobile table-header">
+            <div>자동등록방지</div>
+          </th>
+          <td>
+            <div>
+              <p class="hide-window table-header" style="padding-top:10px;">자동등록방지</p>
+              <!-- <div style="padding:5px 0 5px 0;" class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div> -->
+              <div style="padding:5px 0 5px 0;" class="g-recaptcha" data-sitekey="6Lc7HqAUAAAAAPIVM8aayfLDoOeLAkcY0YFXVnCp"></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <!-- Button -->
+      <div class="width-full" style="text-align:center; padding-top:5px;">
+          <input class="textbtn" type="button" value="등록" id="btn-upload">
+          <input class="textbtn" type="button" value="취소" id="btn-back">
+      </div>
+    </div>
+
+    <input type="hidden" id="item-no" value="1">
+
+  </div>
+
+  <!--Footer-->
+  <% include ./footer %>
+  <!--Scripts-->
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.easing.min.js"></script>
+  <script src="/js/modernizr.custom.42534.js" type="text/javascript"></script>
+  <script src="/js/jquery.waitforimages.js" type="text/javascript"></script>
+  <script src="/js/typed.js" type="text/javascript"></script>
+  <script src="/js/masonry.pkgd.min.js" type="text/javascript"></script>
+  <script src="/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+  <script src="/js/jquery.jkit.1.2.16.min.js"></script>
+
+  <script src="/js/script.js" type="text/javascript"></script>
+  <script src="/js/inquire/write.js" type="text/javascript"></script>
+
+
+  <script>
+    $('#button, #buttons').on('click', function() {
+      $(".opacity-nav").fadeToggle("slow", "linear");
+      // Animation complete.
+    });
+    setWriteDatas(<%- JSON.stringify(res) %>);
+  </script>
+
+</body>
+
+</html>

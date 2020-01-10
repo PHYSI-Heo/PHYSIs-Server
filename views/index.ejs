@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>INDEX</title>
+
+  <meta name="description" content="PHYSIs KIT - INDEX">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/img/icon/icon.png" />
+
+  <!--Style-->
+
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style-responsive.css">
+  <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+
+<body>
+
+  <% include ./header %>
+
+  <div class="content" id="ajax-content">
+
+    <!--Content-->
+    <div class="text-intro" id="site-type">
+      <h1>
+        EASY AND FUN<br>
+        ARDUINO IOT DIY PROJECTS
+      </h1>
+      <h1 class="typewrite">
+        <span>FOR MAKERS </span>
+      </h1>
+      <!--Change on script.js-->
+      <p class="width-60">
+        <strong class="point-text">피지스 메이커 키트</strong>는 누구나 쉽고 재미있게 DIY 콘텐츠를 제작할 수 있는 메이커 키트로써
+        아두이노와 안드로이드로 자신만의 다양한 아이디어 콘텐츠를 직접 제작할 수 있게 도와줄 것 입니다.
+      </p>
+    </div>
+
+    <div class="main-content">
+      <img class="width-full" src="/img/main_img.jpg">
+    </div>
+
+  </div>
+
+  <div class="popup-box" style="display: block;">
+    <span class="standard-lien"></span>
+    <div class="width-33">
+      <div class="popup-close" id="btn-close">
+        <i class="fas fa-times"></i>
+      </div>
+      <img width="100%" src="/img/notify.jpg" alt="" style="margin-bottom: 20px;" />    
+      <h5><strong>네이버 스토어로 이동하려면 <a href="https://smartstore.naver.com/physi">[ 바로가기 ]</a>를 클릭하세요.</strong></h5>        
+    </div>
+  </div>
+
+  <!--Footer-->
+  <% include ./footer %>
+  <!--Scripts-->
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.easing.min.js"></script>
+  <script src="/js/modernizr.custom.42534.js" type="text/javascript"></script>
+  <script src="/js/jquery.waitforimages.js" type="text/javascript"></script>
+  <script src="/js/typed.js" type="text/javascript"></script>
+  <script src="/js/masonry.pkgd.min.js" type="text/javascript"></script>
+  <script src="/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+  <script src="/js/jquery.jkit.1.2.16.min.js"></script>
+
+  <script src="/js/script.js" type="text/javascript"></script>
+
+  <script>
+    $('#button, #buttons').on('click', function() {
+      $(".opacity-nav").fadeToggle("slow", "linear");
+      // Animation complete.
+    });
+
+    $('#btn-close').on('click', function() {
+      $('.popup-box').hide();
+    });
+  </script>
+
+</body>
+
+</html>

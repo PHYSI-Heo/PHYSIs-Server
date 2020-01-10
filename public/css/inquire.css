@@ -1,0 +1,157 @@
+.paragraph {
+  height: auto;
+  /* background:#f8f7f7; */
+  font-weight: 500;
+  border-bottom: 1px solid #aaaaaa;
+  color: #000000;
+  line-height: 30px;
+  font-size: 13px;
+  padding: 10px;
+  /* white-space: pre-line; */
+}
+
+.col-registrant {
+  width: 30%;
+}
+
+.searcharea {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.searcharea .options{
+  float: right;
+}
+
+.searcharea select {
+  width: 100px;
+  float: left;
+  margin-right: 5px;
+}
+
+.searcharea .keyword {
+  width: 150px;
+  float: left;
+  margin-right: 5px;
+}
+
+
+#btn-search {
+  width: auto;
+}
+
+.col-category {
+  width: 8%;
+}
+
+.col-content {
+  width: 16%;
+}
+
+.col-title {
+  width: 44%;
+}
+
+.col-state {
+  width: 10%;
+}
+
+.col-user {
+  width: 8%;
+}
+
+.col-date {
+  width: 14%;
+}
+
+.row-registrant {
+  font-size: 11px;
+  line-height: 20px;
+  vertical-align: bottom;
+}
+
+/*  ===============================
+            Pageing
+===============================  */
+ul .paging {
+  display: inline-block;
+}
+
+ul .paging a {
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: block;
+  color: #939393;
+  background: #fff;
+  border: 0px;
+}
+
+ul .paging a:hover {
+  color: #000;
+  background: #f8f7f7;
+}
+
+ul .paging a.this {
+  color: #fff;
+  background: #3f3f3f;
+}
+
+/*  ===============================
+          Inquire Menu
+===============================  */
+nav .category{
+  width: 20%;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  border: 0;
+  color: #3f3f3f;
+  border-bottom: 2px solid #3f3f3f;
+}
+
+nav .category.this{
+  color: #ffa579;
+  border-bottom: 4px solid #ffa579;
+}
+
+.category span{
+  padding-left: 7px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.board-row {
+  height: auto;
+  /* border-top: 1px solid #f8f7f7; */
+  border-bottom: 1px solid #f8f7f7;
+}
+
+.board-row td {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 12px;
+  line-height: 25px;
+}
+
+.board-row:hover {
+  color: #d47b50;
+  background: #f8f7f7;
+}
+
+.single-line {
+  /* white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 80%;
+  width: 80%;
+  display: block;
+  overflow: hidden; */
+}
+
+.popup-box p {
+  font-weight: 550;
+  line-height: 20px;
+  font-size: 13px;
+  text-align: center;
+}

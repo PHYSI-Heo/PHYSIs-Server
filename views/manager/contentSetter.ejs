@@ -1,0 +1,179 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>MANAGER</title>
+  <meta name="description" content="PHYSIs Kit Manager Page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/img/icon/icon.png" />
+
+  <!--Style-->
+
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/manager.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style-responsive.css">
+  <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+
+<body>
+
+  <% include ./header %>
+
+  <div class="content" id="ajax-content">
+
+    <!--Content-->
+    <div class="text-intro" id="site-type">
+      <h1>PHYSIs Content Setting</h1>
+    </div>
+
+    <div class="main-content">
+
+      <!-- Content List -->
+      <div>
+        <h1 style="margin-top:50px;" class="text-title">Content List</h1>
+        <nav id="content-nav">
+          <a class="content-item this" value="0" id="new-register"><span>New Content</span></a>
+        </nav>
+      </div>
+
+      <!-- Selected Content Info -->
+      <div style="margin-top:50px;">
+        <h1 class="text-title">Content Infos.</h1>
+        <table>
+          <colgroup>
+            <col style="width:20%;" />
+            <col style="width:80%;" />
+          </colgroup>
+
+          <tbody id="content-infos">
+            <tr class="item-row">
+              <th class="table-header"><span>콘텐츠명</span></th>
+              <td><input type="text" class="width-full" id="content-name">
+                <div class="clear"></div>
+              </td>
+            </tr>
+
+            <tr class="item-row">
+              <th class="table-header"><span>콘텐츠명(한글)</span></th>
+              <td><input type="text" class="width-full" id="content-name-kr">
+                <div class="clear"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <th class="table-header"><span>개요</span></th>
+              <td>
+                <textarea id="content-outline" style="height:140px;" type="text" cols="108" rows="15"></textarea>
+              </td>
+            </tr>
+
+            <tr>
+              <th class="table-header"><span>설명</span></th>
+              <td>
+                <textarea id="content-description" style="height:200px;" type="text" cols="108" rows="15"></textarea>
+              </td>
+            </tr>
+
+            <tr>
+              <th class="table-header"><span>Main Img</span></th>
+              <td>
+                <input type="text" class="select-img width-full" id="content-main-img" readonly>
+                <div class="clear"></div>
+              </td>
+            </tr>
+
+            <tr>
+              <th class="table-header"><span>Youtube URL</span></th>
+              <td>
+                <input type="text" class="width-full" id="content-youtube">
+                <div class="clear"></div>
+              </td>
+            </tr>
+
+            <tr class="item-row">
+              <th class="table-header"><span>Visible</span></th>
+              <td style="text-align:center; vertical-align: middle;">
+                <input id="rbtn-visible" class="check-btn" name="visible-state" type="radio" value="Output" checked>
+                <span class="check-value">Visible</span>
+                <input id="rbtn-hidden" style="margin-left:20px;" class="check-btn" name="visible-state" type="radio" value="Hidden">
+                <span class="check-value">Hidden</span>
+              </td>
+            </tr>
+
+            <tr>
+              <th class="table-header"><span>Images</span></th>
+              <td>
+                <div id="content-imgs">
+                </div>
+                <input class="button-submit width-full" id="btn-addimage" type="button" value="이미지 추가">
+                <div class="clear"></div>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+
+        <div style="margin:10px 0 10px 0;">
+          <input class="button-submit width-20" id="btn-del-content" type="button" value="삭제">
+          <input class="button-submit width-20" style="margin-right:15px;" id="btn-update" type="button" value="등록">
+          <div class="clear"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="popup-box" id="files-popup">
+      <span class="standard-lien"></span>
+      <div style="width:400px;">
+        <p>다운로드 파일을 선택하세요.</p>
+        <div id="file-list" style="text-align:left; max-height: 250px; overflow-y:scroll; margin: 10px 0 10px 0;">
+        </div>
+        <input class="button-submit width-full" id="btn-close" type="button" value="닫기">
+        <div class="clear"></div>
+      </div>
+    </div>
+    <input type="hidden" id="content-no">
+
+  </div>
+
+  <!--Footer-->
+  <% include ./footer %>
+  <!--Scripts-->
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.easing.min.js"></script>
+  <script src="/js/modernizr.custom.42534.js" type="text/javascript"></script>
+  <script src="/js/jquery.waitforimages.js" type="text/javascript"></script>
+  <script src="/js/typed.js" type="text/javascript"></script>
+  <script src="/js/masonry.pkgd.min.js" type="text/javascript"></script>
+  <script src="/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+  <script src="/js/jquery.jkit.1.2.16.min.js"></script>
+
+  <script src="/js/script.js" type="text/javascript"></script>
+  <script src="/js/manager/contentmanager.js" type="text/javascript"></script>
+
+  <script>
+    $('#button, #buttons').on('click', function() {
+      $(".opacity-nav").fadeToggle("slow", "linear");
+      // Animation complete.
+    });
+    reqImageFileList();
+    setContentElements(<%- JSON.stringify(contents) %>);
+  </script>
+
+</body>
+
+</html>

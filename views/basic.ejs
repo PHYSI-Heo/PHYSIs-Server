@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>BASIC CODING</title>
+
+
+  <meta name="description" content="PHYSIs KIT - BASIC CODING">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/img/icon/icon.png" />
+
+  <!--Style-->
+
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style-responsive.css">
+  <link rel="stylesheet" href="/css/diyapp.css">
+  <link rel="stylesheet" href="/css/diyapp-responsive.css">
+  <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+
+<body>
+
+  <% include ./header %>
+
+  <div class="content" id="ajax-content">
+
+    <!--Content-->
+    <div class="text-intro" id="site-type">
+      <h1>
+        PHYSIs Basic Coding<br>
+        아두이노 IoT 기본 코딩 키트
+      </h1>     
+      <!--Change on script.js-->
+      <p class="width-60">
+        <strong class="point-text">피지스 메이커 키트</strong>는 아두이노와 안드로이드로 자신만의 다양한 아이디어 콘텐츠를 직접 제작할 수 있는 IoT 코딩 키트입니다. <br>
+        <strong class="point-text">기본 코딩 개발용 키트</strong>는 피지스 메이커 보드를 사용하여 보다 손쉽게 아두이노 코딩 방법을 학습, 교육할 수 있는 입문용 키트입니다. 
+      </p>
+    </div>
+
+    <div class="main-content">
+      <img class="width-full" src="/img/basic/1.png">
+      <img class="width-full" src="/img/basic/2.png">
+      <img class="width-full" src="/img/basic/3.png">
+      <img class="width-full" src="/img/basic/4.png">
+      <img class="width-full" src="/img/basic/5.png">
+      <img class="width-full" src="/img/basic/6.png">
+      <img class="width-full" src="/img/basic/7.png">
+    </div>
+
+  </div>
+
+  <!--Footer-->
+  <% include ./footer %>
+  <!--Scripts-->
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.easing.min.js"></script>
+  <script src="/js/modernizr.custom.42534.js" type="text/javascript"></script>
+  <script src="/js/jquery.waitforimages.js" type="text/javascript"></script>
+  <script src="/js/typed.js" type="text/javascript"></script>
+  <script src="/js/masonry.pkgd.min.js" type="text/javascript"></script>
+  <script src="/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+  <script src="/js/jquery.jkit.1.2.16.min.js"></script>
+
+  <script src="/js/script.js" type="text/javascript"></script>
+  <script src="/js/webpage/diyapps.js" type="text/javascript"></script>
+
+  <script>
+    $('#button, #buttons').on('click', function() {
+      $(".opacity-nav").fadeToggle("slow", "linear");
+      // Animation complete.
+    });
+  </script>
+
+</body>
+
+</html>

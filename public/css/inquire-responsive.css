@@ -1,0 +1,51 @@
+@media (max-width: 769px) {
+  .col-registrant {
+    width: 50%;
+  }
+
+  .searcharea {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .searcharea .options {
+    float: none;
+    margin-bottom: 10px;
+  }
+
+  .searcharea select {
+    width: 30%;
+    margin: 10px 1% 0 0;
+    float: left;
+  }
+
+  .searcharea .keyword {
+    width: 55%;
+    margin: 10px 1% 0 0;
+    float: left;
+  }
+
+  #btn-search {
+    width: 13%;
+    margin-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .col-category {
+    width: 15%;
+  }
+
+  .col-title {
+    width: 65%;
+  }
+
+  .col-state {
+    width: 20%;
+  }
+
+  .auth-popup {
+    width: 280px;
+  }
+
+}

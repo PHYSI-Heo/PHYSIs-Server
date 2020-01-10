@@ -1,0 +1,71 @@
+.searcharea {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.searcharea .options {
+  float: right;
+}
+
+.searcharea .keyword {
+  width: 220px;
+  float: left;
+  margin-right: 5px;
+}
+
+.tab-shodow {
+  -webkit-box-shadow: 0 0 10px #AAAAAA;
+  -moz-box-shadow: 0 0 10px #AAAAAA;
+  box-shadow: 0 0 10px #AAAAAA;
+}
+
+.tab-shodow:hover {
+  background: #f8f7f7;
+}
+
+.app-name {
+  width: 100%;
+  line-height: 40px;
+  font-weight: 900;
+  font-size: 24px;
+  color: #d47b50;
+  padding-top: 5px;
+  word-wrap: break-word;
+}
+
+.app-outline {
+  /* width: 100%; */
+  line-height: 25px;
+  max-height: 50px;
+  height: 50px;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;/* 라인수 */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+}
+
+.explain {
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 10px;
+}
+
+#app-body p {
+  line-height: 30px;
+  /* font-size: 14px; */
+  font-weight: 500;
+}
+
+.app-box {
+  width: 31.3%;
+  margin: 1%;
+  float: left;
+  /* height: 299px; */
+}

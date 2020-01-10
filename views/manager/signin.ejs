@@ -1,0 +1,125 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>MANAGER</title>
+
+  <meta name="description" content="PHYSIs KIT - MANAGER">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/img/icon/icon.png" />
+
+  <!--Style-->
+
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style-responsive.css">
+  <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+
+<body>
+
+  <% include ./header %>
+
+  <div class="content" id="ajax-content">
+
+     <!--Content-->
+    <div class="text-intro" id="site-type">
+      <h1>MANAGER SIGN IN</h1>
+    </div>
+
+    <div class="main-content">
+        
+      <!-- File Upload -->
+      <div style="margin-top:50px;">
+        <h1 class="text-title">Login</h1>
+        
+          <table class="width-full">
+            <colgroup>
+              <col class="width-33" />
+              <col class="width-33" />
+              <col class="width-33" />
+            </colgroup>
+
+            <thead class="item-row">
+              <tr class="table-header">
+                <th>Manager ID</th>
+                <th>Password</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td style="padding:5px;">
+                  <input type="text" class="width-full" name="" id="m_id">
+                </td>
+                <td style="padding:5px;">
+                  <input type="text" class="width-full" name="" id="m_pwd">
+                </td>
+                <td style="padding:5px;"> <input id="m_login" class="button-submit width-full" type="button" value="Login"></td>
+              </tr>
+            </tbody>
+          </table>        
+      </div>
+    </div>
+  </div>  
+
+
+
+  <!--Footer-->
+  <% include ./footer %>
+  <!--Scripts-->
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.easing.min.js"></script>
+  <script src="/js/modernizr.custom.42534.js" type="text/javascript"></script>
+  <script src="/js/jquery.waitforimages.js" type="text/javascript"></script>
+  <script src="/js/typed.js" type="text/javascript"></script>
+  <script src="/js/masonry.pkgd.min.js" type="text/javascript"></script>
+  <script src="/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+  <script src="/js/jquery.jkit.1.2.16.min.js"></script>
+
+  <script src="/js/script.js" type="text/javascript"></script>
+
+  <script>
+    $('#button, #buttons').on('click', function() {
+      $(".opacity-nav").fadeToggle("slow", "linear");
+      // Animation complete.
+    });
+
+    $('#m_login').on('click', function() {
+      $.ajax({
+        type: "POST",
+        dataType: 'json',
+        data: {
+          'mid': $('#m_id').val(),
+          'mpwd' : $('#m_pwd').val()
+        },
+        url: '/manager/signin',
+        timeout: 2000,
+        success: function(res) {
+          if(res.access){
+            alert("Manager Login Successful..");
+            location.reload();
+          }else{
+            alert("Manager Login failed..");
+          }
+        }
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

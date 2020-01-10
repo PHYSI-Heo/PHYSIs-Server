@@ -1,0 +1,63 @@
+@media (max-width: 1023px) {
+  .hide-btn-text {
+    display: none !important;
+  }
+
+  .softwarebtn{
+    width:100%;
+  }
+
+  .basicbtn{
+    width:100%;
+  }
+
+  .software-name {
+    font-size: 22px;
+  }
+
+}
+
+@media (max-width: 769px) {
+  .searcharea {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .searcharea .options{
+    float: none;
+    margin-bottom: 10px;
+  }
+
+  .searcharea .keyword {
+    width: 67%;
+    margin: 10px 1% 0 0;
+    float: left;
+  }
+
+  .iconbtn {
+    width: 15%;
+    margin-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .downloadbtn {
+    width: 100%;
+  }
+
+  .basicbtn{
+    width:100%;
+  }
+
+  td .content-name {
+    padding-left: 5px;
+  }
+
+  td .content-explain {
+    padding-left: 5px;
+  }
+
+  .download-package {
+    margin-left: 0;
+  }
+}

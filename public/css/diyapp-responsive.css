@@ -1,0 +1,36 @@
+@media (max-width: 1023px) {
+  .app-box {
+    width: 46%;
+    margin: 2%;
+  }
+}
+
+@media (max-width: 769px) {
+  .searcharea {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .searcharea .options {
+    float: none;
+    margin-bottom: 10px;
+  }
+
+  .searcharea .keyword {
+    width: 67%;
+    margin: 10px 1% 0 0;
+    float: left;
+  }
+
+  .iconbtn {
+    width: 15%;
+    margin-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .app-box {
+    width: 100%;
+    margin: 10px 0 10px 0;
+  }
+}

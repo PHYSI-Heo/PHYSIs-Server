@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>MANAGER</title>
+
+  <meta name="description" content="PHYSIs Kit Manager Page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="/img/icon/icon.png" />
+
+  <!--Style-->
+
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/manager.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style-responsive.css">
+  <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+
+<body>
+
+  <% include ./header %>
+
+  <div class="content" id="ajax-content">
+
+    <!--Content-->
+    <div class="text-intro" id="site-type">
+      <h1>Content File<br>Manager</h1>
+    </div>
+
+    <div class="main-content">
+
+      <!-- File Upload -->
+      <div style="margin-top:50px;">
+        <h1 class="text-title">Upload New Files</h1>
+        <form name="upload-form" action="/manager/upload/files" method="post" enctype="multipart/form-data">
+          <table class="width-full" style="border-top: 1px solid #000;">
+            <colgroup>
+              <col class="width-half" />
+              <col class="width-half" />
+            </colgroup>
+
+            <thead class="item-row">
+              <tr class="table-header">
+                <th>Folder Name</th>
+                <th>Upload File</th>
+              </tr>
+            </thead>
+
+            <tbody id="upload-items">
+              <tr>
+                <td style="padding:5px;">
+                  <select class="width-full" name="uploadtype">
+                    <option>Image</option>
+                    <option>Download</option>
+                  </select>
+                </td>
+                <td style="padding:5px;"><input class="width-full" type="file" name='uploadfile'></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div>
+            <input id="btn-upload" class="button-submit width-20" type="submit" value="UpLoad" style="margin-left:15px;">
+            <input id="btn-addrow" class="button-submit width-20" type="button" value="Add Tab">
+            <div class="clear"></div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Selected Server Storage Files -->
+      <div style="margin-top:50px;">
+        <h1 class="text-title">Delete Storage Files</h1>
+        <!-- Search Option -->
+        <div class="width-full">
+            <select id="file-selector" name="uploadtype" style="float:left; width:75%; margin-right:5%;">
+              <option>Image</option>
+              <option>Download</option>
+            </select>
+            <input id="btn-search" class="button-submit width-20" style="float:left;" type="button" value="Search">
+
+          <div class="clear"></div>
+        </diV>
+        <!-- Storage File List -->
+        <div id="file-list">
+          <p class="table-header" style="text-align:center; margin:10px;">향후 개발 예정</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--Footer-->
+  <% include ./footer %>
+  <!--Scripts-->
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.easing.min.js"></script>
+  <script src="/js/modernizr.custom.42534.js" type="text/javascript"></script>
+  <script src="/js/jquery.waitforimages.js" type="text/javascript"></script>
+  <script src="/js/typed.js" type="text/javascript"></script>
+  <script src="/js/masonry.pkgd.min.js" type="text/javascript"></script>
+  <script src="/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+  <script src="/js/jquery.jkit.1.2.16.min.js"></script>
+
+  <script src="/js/script.js" type="text/javascript"></script>
+  <script src="/js/manager/filemanager.js" type="text/javascript"></script>
+
+  <script>
+    $('#button, #buttons').on('click', function() {
+      $(".opacity-nav").fadeToggle("slow", "linear");
+      // Animation complete.
+    });
+  </script>
+
+</body>
+
+</html>

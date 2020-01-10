@@ -1,0 +1,30 @@
+{
+  "name": "physiskitserver",
+  "version": "1.0.0",
+  "description": "PHYSIs Maker Kit Server",
+  "main": "app.js",
+  "scripts": {
+    "test": "PHYSIs Homepage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AOGHK/PHYSIsKitServer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AOGHK/PHYSIsKitServer/issues"
+  },
+  "homepage": "https://github.com/AOGHK/PHYSIsKitServer#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-mysql-session": "^2.1.0",
+    "express-session": "^1.16.2",
+    "multer": "^1.4.1",
+    "mysql": "^2.16.0",
+    "request": "^2.88.0",
+    "stylus": "^0.54.5"
+  }
+}
